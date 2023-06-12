@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP 2 JS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css\stle.css">
+  <script>
+    function PromptDemo() {
+      var sCiudad = document.getElementById('ciudad').value;
+      if (sCiudad != null) {
+        alert("Apellido y Nombre: " + document.getElementById('apellidoYNombre').value + "\n"
+          + "DNI: " + document.getElementById('dni').value + "\n"
+          + "Edad: " + document.getElementById('edad').value + "\n"
+          + "Dirección: " + document.getElementById('direccion').value + "\n"
+          + "Código postal: " + document.getElementById('validationCodigoPostal').value + "\n"
+          + "Ciudad: " + document.getElementById('ciudad').value + "\n"
+          + ". ");
+      }
+      else {
+        alert("Falta ingresar Ciudad");
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <header class="header">
+    <h1 style="flex-grow: 2; flex-shrink: 2; flex-basis: 0;"><b>VALIDACION FORMULARIOS</b></h1>
+  </header>
+  <br>
+
+  <div class="container">
+
+    <form class="row g-3">
+
+      <div class="content-center">
+        <h1 className="text-center">
+          Formulario de Inscripción
+        </h1>
+
+      </div>
+
+      <div class="col-md-4">
+        <label for="Apellido y Nombre" class="form-label">Apellido y Nombre <b>(Separado por una coma)</b></label>
+        <input type="text" class="form-control" id="apellidoYNombre" required placeholder="Apellido y Nombre">
+        <span id="errorApellidoYNombre" style="color: red;"></span>
+        <div class="valid-feedback">
+          <span id="errorApellidoYNombre" style="color: red;"></span>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <label for="DNI" class="form-label">DNI</label>
+        <input type="text" class="form-control" id="dni" required placeholder="DNI">
+        <span id="errorDni" style="color: red;"></span>
+        <div class="valid-feedback">
+          <span id="errorDni" style="color: red;"></span>
+        </div>
+      </div>
+
+
+      <div class="col-md-1">
+        <label for="Edad" class="form-label">Edad</label>
+        <input type="text" class="form-control" id="edad" placeholder="Edad">
+        <span id="errorEdad" style="color: red;"></span>
+        <div class="valid-feedback">
+          <span id="errorEdad" style="color: red;"></span>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <label for="Dirección" class="form-label">Dirección</label>
+        <input type="text" class="form-control" id="direccion" placeholder="Direccion">
+        <span id="errorDireccion" style="color: red;"></span>
+        <div class="valid-feedback">
+          <span id="errorDireccion" style="color: red;"></span>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <label for="validationCodigoPostal" class="form-label">Codigo Postal</label>
+        <select class="form-select" id="validationCodigoPostal" required>
+          <option selected disabled value="">Elija Cod. Postal...</option>
+          <option>(1642) San Isidro </option>
+          <option>(1643) Beccar</option>
+          <option>(1609) Boulogne</option>
+          <option>(1653) Villa Ballester</option>
+        </select>
+        <div class="invalid-feedback">
+          Seleccione un código postal válido.
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <label for="validationCustom03" class="form-label">Ciudad</label>
+        <input type="text" class="form-control" id="ciudad" required>
+        <span id="errorCiudad" style="color: red;"></span>
+        <div class="valid-feedback">
+          <span id="errorCiudad" style="color: red;"></span>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <label for="validationCustom03" class="form-label">Telefono</label>
+        <input type="text" class="form-control" id="telefono" required>
+        <span id="errorTelefono" style="color: red;"></span>
+        <div class="valid-feedback">
+          <span id="errorTelefono" style="color: red;"></span>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <label for="Email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="email" placeholder="Email">
+        <span id="errorEmail" style="color: red;"></span>
+        <div class="valid-feedback">
+          <span id="errorEmail" style="color: red;"></span>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <label for="Contrasena" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="contrasena" placeholder="Contraseña">
+        <span id="errorContrasena" style="color: red;"></span>
+        <div class="valid-feedback">
+          <span id="errorContrasena" style="color: red;"></span>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <label for="RepetirContrasena" class="form-label">Repetir Contraseña</label>
+        <input type="password" class="form-control" id="repetircontrasena" placeholder="Repetir Contraseña">
+        <span id="errorRepetirContrasena" style="color: red;"></span>
+        <div class="valid-feedback">
+          <span id="errorRepetirContrasena" style="color: red;"></span>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Acepta los términos y condiciones
+          </label>
+          <div class="invalid-feedback">
+            Debe estar de acuerdo antes de enviar.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <!--<input type="button" onclick="PromptDemo();" value="Verificar"/> -->
+        <button class="btn btn-primary" onclick="PromptDemo();" type="submit">Enviar formulario</button>
+      </div>
+
+    </form>
+
+  </div>
+  <br>
+
+  <script>
+    // Con esto tenemos los elementos de entrada y los msjs de error
+    const apellidoYNombre = document.getElementById('apellidoYNombre');
+    const errorApellidoYNombre = document.getElementById('errorApellidoYNombre');
+
+    const dni = document.getElementById('dni');
+    const errorDni = document.getElementById('errorDni');
+
+    const edad = document.getElementById('edad');
+    const errorEdad = document.getElementById('errorEdad');
+
+
+    const contrasena = document.getElementById('contrasena');
+    const errorContrasena = document.getElementById('errorContrasena');
+
+    const repetirContrasena = document.getElementById('repetircontrasena');
+    const errorRepetirContrasena = document.getElementById('errorRepetirContrasena');
+
+    const email = document.getElementById('email');
+    const errorEmail = document.getElementById('errorEmail');
+
+    const direccion = document.getElementById('direccion');
+    const errorDireccion = document.getElementById('errorDireccion');
+
+    const ciudad = document.getElementById('ciudad');
+    const errorCiudad = document.getElementById('errorCiudad');
+
+    const telefono = document.getElementById('telefono');
+    const errorTelefono = document.getElementById('errorTelefono');
+
+
+    //Validación para el campo 1
+    function validarApellidoYNombre() {
+
+      const valor = apellidoYNombre.value;
+
+      if (valor.length < 7) {
+        errorApellidoYNombre.textContent = 'El Nombre debe tener al menos 7 caracteres';
+      } else {
+        errorApellidoYNombre.textContent = '';
+      }
+      if (valor.includes(' ')) {
+        errorApellidoYNombre.textContent = '';
+      } else {
+        errorApellidoYNombre.textContent = 'Me estas queriendo joder. No tiene espacios';
+      }
+      if (valor.includes(',')) {
+        errorApellidoYNombre.textContent = '';
+      } else {
+        errorApellidoYNombre.textContent = 'Falta la coma que separe el apellido y el nombre';
+      }
+    } //validarApellidoYNombre
+
+    function validarDni() {
+
+      const valor = dni.value;
+
+      if (valor.length < 7 || valor.length > 8) {
+        errorDni.textContent = 'DNI Erroneo';
+      } else {
+        errorDni.textContent = '';
+      }
+
+    } //validarDni
+
+    function validarDireccion() {
+
+      const valor = direccion.value;
+
+      if (valor.length < 3) {
+        errorDireccion.textContent = 'Direccion Errónea';
+      } else {
+        errorDireccion.textContent = '';
+      }
+      
+      if (valor.includes(' ')) {
+        errorDireccion.textContent = '';
+      } else {
+        errorDireccion.textContent = 'Me estas queriendo joder. No tiene espacios';
+      }
+      
+      if (contieneLetrasYNumeros(valor) ) {
+        if (valor.includes(' ')) {
+        errorDireccion.textContent = '';
+      } else {
+        errorDireccion.textContent = 'Me estas queriendo joder. No tiene espacios';
+      }
+      } else {
+        errorDireccion.textContent = 'Tiene que tener numeros y letras';
+      }
+
+
+    } //validarDireccion
+
+
+    function contieneLetrasYNumeros(cadena) {
+      var contieneLetras = /[a-zA-Z]/.test(cadena);
+      var contieneNumeros = /\d/.test(cadena);
+
+      return contieneLetras && contieneNumeros;
+    }
+
+
+
+    function validarCiudad() {
+
+      const valor = ciudad.value;
+
+      if (valor.length < 3) {
+        errorCiudad.textContent = 'Error conla ciudad';
+      } else {
+        errorCiudad.textContent = '';
+      }
+
+    } //validarCiudad
+
+    function validarTelefono() {
+
+      const valor = telefono.value;
+
+
+      if (valor.includes(" ") || valor.includes("-") || valor.includes("(") || valor.includes(")") || valor.length < 7) {
+        errorTelefono.textContent = 'Teléfono Erroneo.';
+      } else {
+        errorTelefono.textContent = '';
+
+      }
+
+
+
+    } //validarTelefono
+
+
+
+    function validarEdad() {
+      valor = edad.value;
+
+      if (valor.length < 2) {
+        errorEdad.textContent = 'Edad vacia no es un valor admitido';
+      } else {
+        errorEdad.textContent = '';
+      }
+
+      nValor = parseInt(edad.value);
+
+      if (nValor > 110 || nValor < 18 || nValor === NaN) {
+        errorEdad.textContent = 'Edad incorrecta';
+      } else {
+        errorEdad.textContent = '';
+      }
+
+    } //validaredad
+
+
+    function validarContrasena() {
+
+      const valor = contrasena.value;
+
+      if (valor.length < 8) {
+        errorContrasena.textContent = 'La Contraseña debe tener 8 o más caracteres';
+      } else {
+        errorContrasena.textContent = '';
+      }
+
+    } //validarContrasena
+
+    function validarRepetirContrasena() {
+
+      const valor = repetircontrasena.value;
+      const valorContrasena = contrasena.value;
+
+      if (valor == valorContrasena) {
+        errorRepetirContrasena.textContent = 'La Contraseñas no son iguales';
+      }
+
+      if (valor.length < 8) {
+        errorRepetirContrasena.textContent = 'La Contraseña debe tener 8 o más caracteres';
+      }
+
+      if (valor.length >= 8 && valor == valorContrasena) {
+        errorRepetirContrasena.textContent = '';
+      }
+      else {
+        errorRepetirContrasena.textContent = 'las contraseñas no coinciden';
+      }
+
+    } //validarContrasena
+
+
+
+
+    // Función de validación para el campo 3
+    function validarEmail() {
+      let valor = email.value;
+      emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+      if (emailRegex.test(valor)) {
+        errorEmail.textContent = '';
+
+      } else {
+        errorEmail.textContent = 'Complete bien el Email!';
+      }
+    } //validarEmail
+
+    function ocultarErrorApellidoYNombre() {
+      errorApellidoYNombre.textContent = '';
+    }
+
+    function ocultarErrorDni() {
+      errorDni.textContent = '';
+    }
+
+    function ocultarErrorEdad() {
+      errorEdad.textContent = '';
+    }
+
+    function ocultarErrorEmail() {
+      errorEmail.textContent = '';
+    }
+    function ocultarErrorContrasena() {
+      errorContrasena.textContent = '';
+    }
+    function ocultarErrorRepetirContrasena() {
+      errorRepetirContrasena.textContent = '';
+    }
+    function ocultarErrorDireccion() {
+      errorDireccion.textContent = '';
+    }
+    function ocultarErrorCiudad() {
+      errorCiudad.textContent = '';
+    }
+    function ocultarErrorTelefono() {
+      errorTelefono.textContent = '';
+    }
+
+
+    apellidoYNombre.addEventListener('blur', validarApellidoYNombre);
+    apellidoYNombre.addEventListener('focus', ocultarErrorApellidoYNombre);
+
+    dni.addEventListener('blur', validarDni);
+    dni.addEventListener('focus', ocultarErrorDni);
+
+    edad.addEventListener('blur', validarEdad);
+    edad.addEventListener('focus', ocultarErrorEdad);
+
+
+    email.addEventListener('blur', validarEmail);
+    email.addEventListener('focus', ocultarErrorEmail);
+
+    contrasena.addEventListener('blur', validarContrasena);
+    contrasena.addEventListener('focus', ocultarErrorContrasena);
+
+    repetirContrasena.addEventListener('blur', validarRepetirContrasena);
+    repetirContrasena.addEventListener('focus', ocultarErrorRepetirContrasena);
+
+    direccion.addEventListener('blur', validarDireccion);
+    direccion.addEventListener('focus', ocultarErrorDireccion);
+
+    ciudad.addEventListener('blur', validarCiudad);
+    ciudad.addEventListener('focus', ocultarErrorCiudad);
+
+    telefono.addEventListener('blur', validarTelefono);
+    telefono.addEventListener('focus', ocultarErrorTelefono);
+
+
+  </script>
+</body>
+
+<div id="footer" class="container">
+  <footer>
+    <span>
+      Materia: Arquitectura y diseño WEB (2023) Alumno: Matias Daniel Cabral
+    </span>
+  </footer>
+</div>
+
+</html>
